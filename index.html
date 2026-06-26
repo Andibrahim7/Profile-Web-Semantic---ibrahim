@@ -244,7 +244,7 @@
                         <div class="architecture-node node-edu">
                             <h5>schema:CollegeOrUniversity</h5>
                             <p>Universitas Halu Oleo</p>
-                            <span class="node-relation-tag">alumniOf</span>
+                            <span class="node-relation-tag">Education</span>
                         </div>
                         <div class="architecture-node node-org">
                             <h5>schema:Organization</h5>
@@ -393,110 +393,38 @@
     <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
     <script src="js/script.js"></script>
 
-   <script type="application/ld+json">
+     <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
     {
-      "@context": "https://schema.org",
-      "@graph": [
-        
-        {
-          "@type": "Person",
-          "@id": "#andi",
-          "name": "Andi Ibrahim Mugfirun Rijaal",
-          "alternateName": "Andi Ibrahim",
-          "jobTitle": "Computer Science Student",
-          "email": "ibrahimkdi12345@gmail.com",
-          "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "Kendari",
-            "addressRegion": "Sulawesi Tenggara",
-            "addressCountry": "ID"
-          },
-          "alumniOf": [
-            { "@id": "#uho" },
-            { "@id": "#sma9" },
-            { "@id": "#smp2" },
-            { "@id": "#sd12" }
-          ],
-          "memberOf": { "@id": "#himatif" },
-          "knowsAbout": [
-            { "@id": "#skill-java" },
-            { "@id": "#skill-python" },
-            { "@id": "#skill-web" }
-          ]
-        },
-
-        {
-          "@type": "CollegeOrUniversity",
-          "@id": "#uho",
-          "name": "Universitas Halu Oleo",
-          "department": "Ilmu Komputer",
-          "location": {
-            "@type": "Place",
-            "address": "Kendari, Sulawesi Tenggara"
-          }
-        },
-
-        {
-          "@type": "HighSchool",
-          "@id": "#sma9",
-          "name": "SMA Negeri 9 Kendari"
-        },
-        {
-          "@type": "MiddleSchool",
-          "@id": "#smp2",
-          "name": "MTS Negeri 2 Kendari"
-        },
-        {
-          "@type": "ElementarySchool",
-          "@id": "#sd12",
-          "name": "SD Negeri 12 Kendari"
-        },
-
-        {
-          "@type": "Organization",
-          "@id": "#himatif",
-          "name": "Himpunan Mahasiswa Ilmu Komputer",
-          "alternateName": "HIMATIF UHO"
-        },
-
-        {
-          "@type": "DefinedTerm",
-          "@id": "#skill-java",
-          "name": "Java Programming",
-          "description": "Pemrograman Berorientasi Objek (OOP)"
-        },
-        {
-          "@type": "DefinedTerm",
-          "@id": "#skill-python",
-          "name": "Python",
-          "description": "Dasar Data Science & NLP"
-        },
-        {
-          "@type": "DefinedTerm",
-          "@id": "#skill-web",
-          "name": "Web Development",
-          "description": "HTML, CSS, JavaScript, Semantic Web"
-        },
-
-        {
-          "@type": "SoftwareApplication",
-          "@id": "#project-dungeon",
-          "name": "Game Dungeon Escape",
-          "applicationCategory": "Game Application",
-          "operatingSystem": "Any",
-          "creator": { "@id": "#andi" }
-        },
-        {
-          "@type": "SoftwareApplication",
-          "@id": "#project-nlp",
-          "name": "Analisis Feedback Praktikum",
-          "applicationCategory": "Data Analytics System",
-          "creator": { "@id": "#andi" }
-        }
-
-      ]
+      "@type": "Person",
+      "name": "Andi Ibrahim Mugfirun Rijaal",
+      "jobTitle": "Mahasiswa Ilmu Komputer",
+      "email": "ibrahimkdi12345@gmail.com",
+      "url": "https://github.com/ibrahimkdi12345"
+    },
+    {
+      "@type": "CollegeOrUniversity",
+      "name": "Universitas Halu Oleo",
+      "url": "https://uho.ac.id",
+      "department": "Program Studi Ilmu Komputer"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "Game Dungeon Escape",
+      "description": "Game petualangan interaktif berbasis Java.",
+      "applicationCategory": "GameApplication",
+      "operatingSystem": "Windows, MacOS"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Java & Python Programming",
+      "termCode": "COMP-001",
+      "description": "Kompetensi rekayasa perangkat lunak."
     }
-    </script>
-
+  ]
+}
+</script>
 </body>
 </html>
