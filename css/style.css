@@ -1,3 +1,14 @@
+/* Mencegah layar tergeser ke samping */
+* {
+    box-sizing: border-box;
+}
+
+/* Memastikan semua gambar otomatis menyesuaikan layar */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
 /* --- VARIABEL WARNA & FONT --- */
 :root {
     --bg-dark: #0a192f;
@@ -811,4 +822,26 @@ section {
 
 .contact-interactive-card:hover .contact-action-text {
     gap: 10px;
+}
+
+/* Aturan Khusus Layar HP / Mobile */
+@media screen and (max-width: 768px) {
+    /* Mengubah font agar tidak kebesaran di HP */
+    h1 { font-size: 24px !important; }
+    h2 { font-size: 20px !important; }
+    p { font-size: 15px !important; }
+
+    /* Jika ada elemen yang ke samping, paksa berjejer ke bawah */
+    .container, .about, .projects, .skills {
+        display: flex;
+        flex-direction: column;
+        width: 100% !important;
+        padding: 15px;
+    }
+
+    /* Hilangkan margin kiri-kanan yang terlalu lebar di HP */
+    body {
+        margin: 0;
+        padding: 0 10px;
+    }
 }
